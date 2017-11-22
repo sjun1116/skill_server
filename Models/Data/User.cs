@@ -12,13 +12,27 @@ namespace DotnetCoreServer.Models
         public string FacebookName{ get; set; }
         public string FacebookPhotoURL{ get; set; }
         public string FacebookAccessToken{ get; set; }
+        public int Point{ get; set; } 
         public string AccessToken{ get; set; }
         public DateTime CreatedAt{ get; set; }
+        public int Diamond{ get; set; }
+        public int Health{ get; set; }
+        public int Defense{ get; set; }
+        public int Damage{ get; set; }
+        public int Speed{ get; set; }
+        public int HealthLevel{ get; set; }
+        public int DefenseLevel{ get; set; }
+        public int DamageLevel{ get; set; }
+        public int SpeedLevel{ get; set; }
         public int Level{ get; set; }
         public int Experience{ get; set; }
-        public int MaxExperience{ get; set; }
+        public int ExpForNextLevel{ get; set; }
+        public int ExpAfterLastLevel{ get; set; }
         public string Name{ get; set; }
-        public int Money { get; set; }
+        public int Mana{ get; set; }
+        public int Money{ get; set; }
+        public int MagicDamage{ get; set; }
+        public int SceneNumber{ get; set; }
         public int Str{ get; set; }
         public int Int{ get; set; }
         public int Con{ get; set; }
