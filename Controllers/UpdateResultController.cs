@@ -27,7 +27,7 @@ namespace DotnetCoreServer.Controllers
 
             User user = userDao.GetUser(request.UserID);
 
-            //user.Point = user.Point + request.Point;
+            user.Point = user.Point + request.Point;
 
             userDao.UpdateUser(user);
 

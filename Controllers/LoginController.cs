@@ -17,15 +17,8 @@ namespace DotnetCoreServer.Controllers
             this.userDao = userDao;
         }
 
-        //// GET /api/login
-        //[HttpGet("{id}")]
-        //public IEnumerable<User> GetAll()
-        //{
-        //    return User.ToList();
-        //}
-
         // GET /api/login/{id}
-        [HttpGet]
+        [HttpGet("{id}")]
         public User GetByID(long id)
         {
             User user = userDao.GetUser(id);
