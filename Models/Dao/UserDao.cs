@@ -61,7 +61,7 @@ namespace DotnetCoreServer.Models
                     SELECT 
                         user_id, facebook_id, facebook_name, 
                         facebook_photo_url, created_at, 
-                        access_token, statpoint, str, wis, con, dex, level, experience
+                        access_token, statpoint, str, wis, con, dex, level, experience, expmax, money
                     FROM tb_user 
                     WHERE user_id = {0}",
                      UserID);
@@ -89,6 +89,8 @@ namespace DotnetCoreServer.Models
                             user.Dex = reader.GetInt32(10);
                             user.Level = reader.GetInt32(11);
                             user.Experience = reader.GetInt32(12);
+                            user.MaxExperience = reader.GetInt32(13);
+                            user.Money = reader.GetInt32(14);
                         }
                     }
                 }
@@ -126,10 +128,10 @@ namespace DotnetCoreServer.Models
                 string query = String.Format(
                     @"
                     UPDATE tb_user SET 
-                        statpoint = {0}, str= {1}, wis = {2}, con = {3}, dex = {4}, level = {5}, experience = {6}
-                    WHERE user_id = {7}
+                        statpoint = {0}, str= {1}, wis = {2}, con = {3}, dex = {4}, level = {5}, experience = {6}, expmax = {7}, money = {8}
+                    WHERE user_id = {9}
                     ",
-                user.StatPoint, user.Str, user.Int, user.Con, user.Dex, user.Level, user.Experience, user.UserID
+                user.StatPoint, user.Str, user.Int, user.Con, user.Dex, user.Level, user.Experience, user.MaxExperience, user.Money, user.UserID
                      );
 
                 Console.WriteLine(query);

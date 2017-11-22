@@ -26,7 +26,7 @@ namespace DotnetCoreServer.Models
         public int SpeedLevel{ get; set; }
         public int Level{ get; set; }
         public int Experience{ get; set; }
-        public int ExpForNextLevel{ get; set; }
+        public int MaxExperience{ get; set; }
         public int ExpAfterLastLevel{ get; set; }
         public string Name{ get; set; }
         public int Mana{ get; set; }
