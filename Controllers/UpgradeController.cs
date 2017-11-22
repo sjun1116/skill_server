@@ -59,6 +59,12 @@ namespace DotnetCoreServer.Controllers
             }else if ("Experience".Equals(request.UpgradeType))
             {
                 upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.Experience, user.UserID);
+            }else if ("MaxExperience".Equals(request.UpgradeType))
+            {
+                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.Experience, user.UserID);
+            }else if ("Money".Equals(request.UpgradeType))
+            {
+                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.Experience, user.UserID);
             }else{
                 // 유효하지 않은 업그레이드 타입입니다.
             }
@@ -109,6 +115,20 @@ namespace DotnetCoreServer.Controllers
             {
 
                 user.Experience = request.stat;
+
+            }
+
+            else if ("MaxExperience".Equals(request.UpgradeType))
+            {
+
+                user.MaxExperience = request.stat;
+
+            }
+
+            else if ("Money".Equals(request.UpgradeType))
+            {
+
+                user.Money = request.stat;
 
             }
 
